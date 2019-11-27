@@ -52,3 +52,5 @@ function createNewUser(usernameNew, passwordNew)
      xhttp.send();
 
 }
+
+//test
