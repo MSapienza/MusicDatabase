@@ -27,7 +27,7 @@ echo $password;
 $sql = "SELECT * FROM MUSIC_USERS_T WHERE USERNAME = '".$username."' AND PASSWORD = ''".$password."'";
 $result = mysqli_query($conn, $sql);
 
-if ($row = mysqli_fetch_array($result))
+if ($result)
 {
      echo "logic successful";
 } 

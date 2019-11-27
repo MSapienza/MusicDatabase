@@ -1,12 +1,16 @@
 
-function validateLogin(username, password)
+function validateLogin()
 {
-     var user = username + "," + password;
+     var user = document.getElementById("username").value;
+     var pass = document.getElementById("password").value;
+
+     var userDetails = username + "," + password;
+     document.getElementById("txtHint").innerHTML = userDetails;
      //TODO redirect to index
 
      var xhttp;
      
-     if (user == "") 
+     if (userDetails == "") 
      {
           document.getElementById("txtHint").innerHTML = "";
           return;
@@ -17,11 +21,11 @@ function validateLogin(username, password)
      {
           if (this.readyState == 4 && this.status == 200)
           {
-               document.getElementById("txtHint").innerHTML = this.responseText;
+               // document.getElementById("txtHint").innerHTML = this.responseText;
           }
      };
 
-     xhttp.open("GET", "userValidation.php?q="+user, true);
+     xhttp.open("GET", "userValidation.php?q="+userDetails, true);
      xhttp.send();
 }
 
@@ -52,3 +56,6 @@ function createNewUser(usernameNew, passwordNew)
      xhttp.send();
 
 }
+
+//if PHP server doesn't work, close and reopen VS Code
+//current PHP root: /Users/matthewsapienza/Desktop/Coding/Github Pulls/MusicDatabase
