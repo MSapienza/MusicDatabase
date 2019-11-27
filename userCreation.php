@@ -27,14 +27,10 @@ echo $password;
 $sql = "SELECT * FROM MUSIC_USERS_T WHERE USERNAME = '".$username."' AND PASSWORD = ''".$password."'";
 $result = mysqli_query($conn, $sql);
 
-if ($row = mysqli_fetch_array($result))
+while ($row = mysqli_fetch_array($result))
 {
      echo "logic successful";
 } 
-else
-{
-     echo "Either incorrect username or password entered. Please try again.";
-}
 
 mysqli_close($conn);
  ?>

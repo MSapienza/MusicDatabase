@@ -9,12 +9,15 @@
 
     <body>
          <div class = "centeredDiv">
-               <h1>Please login to continue</h1><br> 
-               Username: <input type = "text" id = "username"> <br>
-               Password: <input type = "text" id = "password"> <br><br>
+               <h1>Please login to continue:</h1><br> 
+               Username: &nbsp; &nbsp; <input type = "text" id = "username"> <br>
+               Password: &nbsp; &nbsp; <input type = "text" id = "password"> <br><br>
                <input type = "button" onclick = "validateLogin(username, password)" value = "Submit"/>
-               <input type = "button" onclick = "createNewUser()" value = "Create Account"/>
-               <div id = "txtHint"></div>
+               <div id = "txtHint"></div><br><br>
+               <h1>No account? Create one now!</h1><br> 
+               Username: &nbsp; &nbsp; <input type = "text" id = "usernameNew"> <br>
+               Password: &nbsp; &nbsp; <input type = "text" id = "passwordNew"> <br><br>
+               <input type = "button" onclick = "createNewUser(usernameNew, passwordNew)" value = "Create Account"/>
          </div>
     </body>
 </html>
