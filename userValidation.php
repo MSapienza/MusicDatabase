@@ -8,28 +8,25 @@ if($mysqli->connect_error)
 $q = strval($_GET['q']);
 
 $splitPosition = strpos($q, ",");
-$username;
-$password;
+$username = "";
+$password = "";
 
 for ($i = 0; $i < $splitPosition; $i++)
 {
      $username[$i] = $q[$i];
 }
 
-for ($i = $splitPosition, $j = 0; $i < strlen($q); $i++, $j++)
+for ($i = $splitPosition+1, $j = 0; $i < strlen($q); $i++, $j++)
 {
      $password[$j] = $q[$i];
 }
 
-echo $username;
-echo $password;
-
-$sql = "SELECT * FROM MUSIC_USERS_T WHERE USERNAME = '".$username."' AND PASSWORD = ''".$password."'";
+$sql = "SELECT * FROM MUSIC_USERS_T WHERE USERNAME = '".$username."' AND PASSWORD = '".$password."'";
 $result = mysqli_query($conn, $sql);
 
-if ($result)
+if ($result->num_rows > 0)
 {
-     echo "logic successful";
+     echo "Login successful";
 } 
 else
 {

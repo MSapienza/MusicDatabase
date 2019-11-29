@@ -1,27 +1,24 @@
 
-function validateLogin()
+function validateLogin(un, pw)
 {
-     var user = document.getElementById("username").value;
-     var pass = document.getElementById("password").value;
+     var user = document.getElementById(un).value;
+     var pass = document.getElementById(pw).value;
+     var userDetails = user + "," + pass;
+     var xhttp = new XMLHttpRequest();
 
-     var userDetails = username + "," + password;
-     document.getElementById("txtHint").innerHTML = userDetails;
      //TODO redirect to index
-
-     var xhttp;
      
      if (userDetails == "") 
      {
           document.getElementById("txtHint").innerHTML = "";
           return;
      }
-     xhttp = new XMLHttpRequest();
 
      xhttp.onreadystatechange = function() 
      {
           if (this.readyState == 4 && this.status == 200)
           {
-               // document.getElementById("txtHint").innerHTML = this.responseText;
+               document.getElementById("txtHint").innerHTML = this.responseText;
           }
      };
 
