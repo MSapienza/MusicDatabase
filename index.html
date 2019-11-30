@@ -29,9 +29,19 @@
             <div id = "txtHint"></div><br><br>
         </div>
         <div class = "leftDiv">
-
+            <h1>View All Songs Known By Users</h1><br>
+            <form>
+                <input type = "radio" value = "piano"/>Piano Songs <br> <br><br>
+                <input type = "radio" value = "electricGuitar"/>Electric Guitar Songs <br> <br><br>
+                <input type = "radio" value = "acousticGuitar"/>Acoustic Guitar Songs <br> <br><br>
+                <input type = "radio" value = "ukulele"/>Ukulele Songs <br> <br><br>
+                <input type = "radio" value = "vocals"/>Vocal Songs <br> <br><br>
+                <input type = "button" onclick = "viewSongs(this.value)" value = "Submit"/> &nbsp; &nbsp;
+                <input type = "button" onclick = "location.reload()" value = "Reset"/><br><br>
+            </form>
         </div>
         <div class = "rightDiv">
+            <h1>Something else</h1>
 
         </div>
         
