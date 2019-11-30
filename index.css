@@ -36,7 +36,7 @@ a
 {
      position: absolute;
      top: 20%;
-     right: 0%;
+     right: 1%;
      width: 32%;
      height: 50%;
      border: 2px solid rgb(0, 0, 0);
@@ -47,7 +47,7 @@ a
 
 .leftDiv
 {
-     left: 0%;
+     left: 1%;
      float: left;
      position: absolute;
      top: 20%;

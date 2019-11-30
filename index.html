@@ -11,9 +11,10 @@
          <div class = "centeredDiv">
             <h1>What songs can you perform?</h1><br> 
             <form>
-                First Name:<br><input type = "text" id = "firstName" placeholder = "firstName"/> <br><br>
-                Last Name:<br><input type = "text" id = "lastName" placeholder = "lastName"/> <br><br>
-                Song You Can Perform:<br><input type = "text" id = "song" placeholder = "Song Name"/><br><br>
+                First Name:<br><input type = "text" id = "firstName" placeholder = "Your First Name"/> <br><br>
+                Last Name:<br><input type = "text" id = "lastName" placeholder = "Your Last Name"/> <br><br>
+                Song Name:<br><input type = "text" id = "song" placeholder = "Song Name"/><br><br>
+                Song Artist:<br><input type = "text" id = "artist" placeholder = "Song Artist"/><br><br>
                 <label>Instrument</label><br>
                 <select id = "instrument">
                 <option value = "">Select From this Dropdown</option>
@@ -25,28 +26,35 @@
                 </select>
             </form><br><br>
             <input type = "button" onclick = "collectInput()" value = "Submit"/> &nbsp; &nbsp;
-            <input type = "button" onclick = "location.reload()" value = "Reset"/>
+            <input type = "button" onclick = "location.reload()" value = "Reset"/><br><br>
             <div id = "txtHint"></div><br><br>
         </div>
         <div class = "leftDiv">
             <h1>View All Songs Known By Users</h1><br>
             <form>
-                <input type = "radio" value = "piano"/>Piano Songs <br> <br><br>
-                <input type = "radio" value = "electricGuitar"/>Electric Guitar Songs <br> <br><br>
-                <input type = "radio" value = "acousticGuitar"/>Acoustic Guitar Songs <br> <br><br>
-                <input type = "radio" value = "ukulele"/>Ukulele Songs <br> <br><br>
-                <input type = "radio" value = "vocals"/>Vocal Songs <br> <br><br>
-                <input type = "button" onclick = "viewSongs(this.value)" value = "Submit"/> &nbsp; &nbsp;
+                <input type = "radio" name = "all" value = "piano"/>Piano Songs <br> <br><br>
+                <input type = "radio" name = "all" value = "electricGuitar"/>Electric Guitar Songs <br> <br><br>
+                <input type = "radio" name = "all" value = "acousticGuitar"/>Acoustic Guitar Songs <br> <br><br>
+                <input type = "radio" name = "all" value = "ukulele"/>Ukulele Songs <br> <br><br>
+                <input type = "radio" name = "all" value = "vocals"/>Vocal Songs <br> <br><br>
+                <input type = "button" onclick = "viewAllSongs(all.value)" value = "Submit"/> &nbsp; &nbsp;
                 <input type = "button" onclick = "location.reload()" value = "Reset"/><br><br>
+                <div id = "txtHintLeft"></div><br><br>
             </form>
         </div>
         <div class = "rightDiv">
-            <h1>Something else</h1>
-
+            <h1>View Top Wanted Songs</h1><br>
+            <form>
+                <input type = "radio" name = "top" value = "piano"/>Piano Songs <br> <br><br>
+                <input type = "radio" name = "top" value = "electricGuitar"/>Electric Guitar Songs <br> <br><br>
+                <input type = "radio" name = "top" value = "acousticGuitar"/>Acoustic Guitar Songs <br> <br><br>
+                <input type = "radio" name = "top" value = "ukulele"/>Ukulele Songs <br> <br><br>
+                <input type = "radio" name = "top" value = "vocals"/>Vocal Songs <br> <br><br>
+                <input type = "button" onclick = "viewTopSongs(top.value)" value = "Submit"/> &nbsp; &nbsp;
+                <input type = "button" onclick = "location.reload()" value = "Reset"/><br><br>
+                <div id = "txtHintRight"></div><br><br>
+            </form>
         </div>
-        
-        
+        <div class = "txtHint"></div>
     </body>
-
-    <div class = "sideNav"></div>
 </html>
