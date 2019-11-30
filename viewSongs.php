@@ -24,7 +24,7 @@ for ($i = $splitPosition, $j = 0; $i < strlen($q); $i++, $j++)
 echo $username;
 echo $password;
 
-$sql = "SELECT * FROM MUSIC_USERS_T WHERE USERNAME = '".$username."' AND PASSWORD = ''".$password."'";
+$sql = "SELECT FIRST_NAME, LAST_NAME, SONG_NAME, SONG_ARTIST FROM MUSIC_T";
 $result = mysqli_query($conn, $sql);
 
 while ($row = mysqli_fetch_array($result))

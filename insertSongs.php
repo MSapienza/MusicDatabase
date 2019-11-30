@@ -21,7 +21,7 @@ for ($i = $splitPosition+1, $j = 0; $i < strlen($q); $i++, $j++)
      $password[$j] = $q[$i];
 }
 
-$sql = "SELECT * FROM MUSIC_USERS_T WHERE USERNAME = '".$username."' AND PASSWORD = '".$password."'";
+$sql = "SELECT * FROM MUSIC_T WHERE USERNAME = '".$username."' AND PASSWORD = '".$password."'";
 $result = mysqli_query($conn, $sql);
 
 if ($result->num_rows > 0)

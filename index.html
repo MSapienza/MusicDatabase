@@ -10,21 +10,25 @@
     <body>
          <div class = "centeredDiv">
             <h1>What songs can you perform?</h1><br> 
-            <form>
-                First Name:<br><input type = "text" id = "firstName" placeholder = "Your First Name"/> <br><br>
-                Last Name:<br><input type = "text" id = "lastName" placeholder = "Your Last Name"/> <br><br>
-                Song Name:<br><input type = "text" id = "song" placeholder = "Song Name"/><br><br>
-                Song Artist:<br><input type = "text" id = "artist" placeholder = "Song Artist"/><br><br>
-                <label>Instrument</label><br>
-                <select id = "instrument">
-                <option value = "">Select From this Dropdown</option>
-                <option value = "Piano">Piano</option>
-                <option value = "ElectricGuitar">Electric Guitar</option>
-                <option value = "AcousticGuitar">Acoustic Guitar</option>
-                <option value = "Ukulele">Ukulele</option>
-                <option value = "Vocals">Vocals</option>
-                </select>
-            </form><br><br>
+            <table id = "myTable">
+                <form>
+                    <th>First Name:<br><input type = "text" id = "firstName" placeholder = "Your First Name"/></th>
+                    <th>Last Name:<br><input type = "text" id = "lastName" placeholder = "Your Last Name"/></th>
+                    <th>Song Name:<br><input type = "text" id = "song" placeholder = "Song Name"/></th>
+                    <th>Song Artist:<br><input type = "text" id = "artist" placeholder = "Song Artist"/></th> 
+                    <th><label>Instrument</label>
+                    <select id = "instrument">
+                    <option value = "">Select From this Dropdown</option>
+                    <option value = "Piano">Piano</option>
+                    <option value = "ElectricGuitar">Electric Guitar</option>
+                    <option value = "AcousticGuitar">Acoustic Guitar</option>
+                    <option value = "Ukulele">Ukulele</option>
+                    <option value = "Vocals">Vocals</option>
+                    </select></th> 
+                </form>
+            </table><br><br>
+            <input type = "button" onclick = "addRow()" value = "Add Row"/> &nbsp; &nbsp;
+            <input type = "button" onclick = "removeRow()" value = "Remove Row"/> &nbsp; &nbsp;<br><br>
             <input type = "button" onclick = "collectInput()" value = "Submit"/> &nbsp; &nbsp;
             <input type = "button" onclick = "location.reload()" value = "Reset"/><br><br>
             <div id = "txtHint"></div><br><br>
@@ -32,8 +36,8 @@
         <div class = "leftDiv">
             <h1>View All Songs Known By Users</h1><br>
             <form>
-                <input type = "radio" name = "all" value = "piano"/>Piano Songs <br> <br><br>
-                <input type = "radio" name = "all" value = "electricGuitar"/>Electric Guitar Songs <br> <br><br>
+                <input type = "radio" name = "all" value = "piano"/>Piano Songs<br> <br><br>
+                <input type = "radio" name = "all" value = "electricGuitar"/>Electric Guitar Songs<br> <br><br>
                 <input type = "radio" name = "all" value = "acousticGuitar"/>Acoustic Guitar Songs <br> <br><br>
                 <input type = "radio" name = "all" value = "ukulele"/>Ukulele Songs <br> <br><br>
                 <input type = "radio" name = "all" value = "vocals"/>Vocal Songs <br> <br><br>
