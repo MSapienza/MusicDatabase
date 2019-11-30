@@ -27,10 +27,7 @@ h3
 
 form
 {
-  text-align: center;
-  font-size: 14pt;
-  color: #fff79e;
-  margin-bottom: -30px;
+
 }
 
 a
@@ -39,20 +36,7 @@ a
      color: rgb(8, 8, 8);
 }
 
-.guitarDiv
-{
-     position: absolute;
-     float: right;
-     top: 20%;
-     right: 0%;
-     width: 32%;
-     border: 2px solid rgb(0, 0, 0);
-     padding: 10px;
-     text-align: center;
-     background: rgba(252, 158, 158, 0.3);
-}
-
-.pianoDiv
+.rightDiv
 {
      position: absolute;
      top: 20%;
@@ -64,7 +48,7 @@ a
      background: rgba(252, 158, 158, 0.3);
 }
 
-.vocalsDiv
+.leftDiv
 {
      margin-left: 33.38%;
      float: left;
@@ -90,3 +74,4 @@ a
      text-align: center;
      background: rgba(252, 158, 158, 0.6);
 }
+

@@ -6,10 +6,10 @@ if($mysqli->connect_error)
 }
 
 $q = strval($_GET['q']);
-
 $splitPosition = strpos($q, ",");
 $username = "";
 $password = "";
+$trueFalse;
 
 for ($i = 0; $i < $splitPosition; $i++)
 {
@@ -27,11 +27,13 @@ $result = mysqli_query($conn, $sql);
 if ($result->num_rows > 0)
 {
      echo "Login successful";
+     $trueFalse = true;
 } 
 else
 {
      echo "Either incorrect username or password entered. Please try again.";
+     $trueFalse = false;
 }
 
 mysqli_close($conn);
- ?>
+?>
