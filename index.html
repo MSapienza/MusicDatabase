@@ -12,11 +12,11 @@
             <h1>What songs can you perform?</h1><br> 
             <table id = "myTable">
                 <form>
-                    <th>First Name:<br><input type = "text" id = "firstName" placeholder = "Your First Name"/></th>
-                    <th>Last Name:<br><input type = "text" id = "lastName" placeholder = "Your Last Name"/></th>
-                    <th>Song Name:<br><input type = "text" id = "song" placeholder = "Song Name"/></th>
-                    <th>Song Artist:<br><input type = "text" id = "artist" placeholder = "Song Artist"/></th> 
-                    <th><label>Instrument</label>
+                    <tr>First Name:<br><input type = "text" id = "firstName" placeholder = "Your First Name"/></tr><br><br>
+                    <tr>Last Name:<br><input type = "text" id = "lastName" placeholder = "Your Last Name"/></tr><br><br>
+                    <tr>Song Name:<br><input type = "text" id = "song" placeholder = "Song Name"/></tr><br><br>
+                    <tr>Song Artist:<br><input type = "text" id = "artist" placeholder = "Song Artist"/></tr><br><br>
+                    <tr><label>Instrument</label><br>
                     <select id = "instrument">
                     <option value = "">Select From this Dropdown</option>
                     <option value = "Piano">Piano</option>
@@ -24,7 +24,7 @@
                     <option value = "AcousticGuitar">Acoustic Guitar</option>
                     <option value = "Ukulele">Ukulele</option>
                     <option value = "Vocals">Vocals</option>
-                    </select></th> 
+                    </select></tr> 
                 </form>
             </table><br><br>
             <input type = "button" onclick = "addRow()" value = "Add Row"/> &nbsp; &nbsp;
